@@ -1,0 +1,29 @@
+/* ========================================================= (Reset css) ====================================================== */
+.container{
+	direction:rtl !important;
+}
+
+.footer1 i {
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important;
+}
+
+.md-form  label{
+	left: auto !important;
+	right: 0 !important;
+}
+.previousNavButton,.tempMenuButtons{
+	float: right !important;
+}
+.mrPrev{
+    float:left !important
+}
+
+#loader{
+	direction:ltr !important;
+}
+
+

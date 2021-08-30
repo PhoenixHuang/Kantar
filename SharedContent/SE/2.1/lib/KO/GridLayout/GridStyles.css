@@ -1,0 +1,31 @@
+select {
+  
+ background-color:#e0e0e0;
+   width: 170px;
+   font-size:7pt;
+   color:#000;
+   border: solid 1px #ccc;
+   border-radius: 10;
+   height: 28px;
+     
+   }
+   select:focus {
+   /* outline: none;*/
+   background-color:#e0e0e0;
+   border:1px solid #ccc;
+}
+
+select option {
+    font-size:13px;
+	 color:#000;
+	 border:1px solid #ccc;
+}
+select option:hover {
+    background-color:#9FCC3B;
+	border:1px solid #ccc;
+}
+select:hover {
+    background-color:#e0e0e0;
+	border:1px solid #ccc;
+}
+.questionContainer, .qcContainer{ padding-left: 20px;}

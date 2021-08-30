@@ -1,0 +1,48 @@
+/* ========================================================= (Reset css) ====================================================== */
+.container{
+	direction:rtl !important;
+}
+
+.footer1 i {
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important;
+}
+
+.md-form  label{
+	left: auto !important;
+	right: 0.978rem !important;
+}
+.previousNavButton,.tempMenuButtons,div[id$=Webcam],div[id$=WebcamSnap]{
+	float: right !important;
+}
+.mrPrev{
+    float:left !important
+}
+
+#loader,#surveyButtons{
+	direction:ltr !important;
+}
+.question-text,.question-component,div[id$=StrengthmeterText],.dropdown-content li{
+	text-align:right;
+}
+input[type=date]+label, input[type=datetime-local]+label, input[type=email]+label, input[type=number]+label, input[type=password]+label, input[type=search-md]+label, input[type=tel]+label, input[type=text]+label, input[type=time]+label, input[type=url]+label, textarea.md-textarea+label {
+    margin-right: .5rem;
+}
+.select-wrapper input.select-dropdown{
+	padding-right: 18px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     .btn.btn-fab i.material-icons, .input-group-btn .btn.btn-fab i.material-icons{
+		left:0%;
+	 }
+}
+@supports (-ms-accelerator:true) {
+  .btn.btn-fab i.material-icons, .input-group-btn .btn.btn-fab i.material-icons{
+		left:0%;
+	 }
+}
+body{text-align:inherit;}
+

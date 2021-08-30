@@ -1,0 +1,1 @@
+rp_grouped=function(rs,cs){return[{c:true,s:"/Styles/rp_grouped_default.json"}];};

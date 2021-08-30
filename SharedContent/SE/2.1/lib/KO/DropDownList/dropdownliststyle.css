@@ -1,0 +1,28 @@
+ .mrDropdown{
+ background-color:#e0e0e0;
+   width: 170px;
+   font-size:16px;
+   color:#000;
+   border: solid 1px #ccc;
+   height: 28px;
+     
+   }
+   .mrDropdown:focus {
+   /* outline: none;*/
+   background-color:#e0e0e0;
+   border:1px solid #ccc;
+}
+
+.mrDropdown option {
+    font-size:13px;
+	 color:#000;
+	 border:1px solid #ccc;
+}
+.mrDropdown option:hover {
+    background-color:#e0e0e0;
+	border:1px solid #ccc;
+}
+.mrDropdown:hover {
+    background-color:#e0e0e0;
+	border:1px solid #ccc;
+}

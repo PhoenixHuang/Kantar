@@ -1,0 +1,16 @@
+.player-skin {position:absolute;z-index:3;border-radius:20px;padding:15px;width:100%;}
+.videoplayer {position:absolute;bottom:0px;top:0px;left:0px;right:0px;}
+.background-dim {position:absolute;z-index:2;left:0;right:0;top:0;}
+.slidercontainer{display:none;position:relative;z-index:3;margin:auto;overflow:visible;}
+.videoslider {position:relative;overflow:hidden;border-style:solid;}
+.sliderval {position:absolute;height:100%;left:0px;}
+.slider-rating{position:absolute;text-align:center;}
+.rating-low{left:0;}
+.rating-mid{left:50%}
+.rating-high{left:100%;}
+.slider-thumb{position:absolute;display:none;cursor:pointer;}
+.thumb-moveable{cursor:-moz-grabbing;cursor:-webkit-grabbing;}
+.slider-playbutton{position:absolute;width:0;height:0;}
+.slider-playcontainer{position:absolute;left:50%;cursor:pointer;border-style:solid;}
+.mrErrorText{position:absolute;z-index:3;width:100%;text-align:center;top:100px;}
+#testPanel{z-index:3;}

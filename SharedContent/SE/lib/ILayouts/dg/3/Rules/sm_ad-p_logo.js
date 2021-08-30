@@ -1,0 +1,1 @@
+sm_ad_p_logo=function(a,b){return[{c:b.aLen<=9,s:"/Styles/sm_ad-p_logo_9.json"},{c:!0,s:"/Styles/sm_ad-p_logo_default.json"}]};

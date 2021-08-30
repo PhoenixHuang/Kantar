@@ -1,0 +1,204 @@
+
+.mrNext, .mrPrev, #dropMenu li a div, .radio, .check{
+	background: url(../images/Sprites.png)!important;
+}	
+
+/* ========================================================= (Dimensions Formatting) ====================================================== */
+
+h1 {  color:#0096C8;}
+h2 {  color:#0096C8;}
+h3 { color:#0096C8;}
+h4 { color:#0096C8; }
+h5 { color:#0096C8;}
+h6 { color:#0096C8;}
+  
+/* ========================================================= (End Dimensions Formatting) ====================================================== */
+
+/* ========================================================= (CUSTOM BUTTONS) ====================================================== */
+
+.check{
+	background-position: -25px -225px!important;
+}
+
+.checkHover{
+background-position: 0px -225px!important;
+}
+
+.checkChecked{
+background-position: -50px -225px!important;
+}
+
+.radio {
+	background-position: -25px -200px!important;
+}
+
+.radioHover{
+	background-position: 0px -200px!important;
+}
+
+.radioChecked{
+	background-position: -50px -200px!important;
+}	
+
+
+/* ========================================================= (END CUSTOM BUTTONS) ====================================================== */
+/* ========================================================= (MENU) ====================================================== */
+
+#kmenu {
+	background-color:#0096C8;
+}
+
+#kButton{
+	background-color:#0096C8;
+}
+
+#dropMenu{
+	background:#0096C8;
+}
+
+#dropMenu li a.privacy div{
+	background-position: -415px -200px!important;
+}
+		
+#dropMenu li a.privacy:hover div, #dropMenu li a.privacy:focus div{
+	background-position: -450px -200px!important;	
+}
+	
+#dropMenu li a.help div{
+	background-position: -500px -200px!important;	
+}
+	
+#dropMenu li a.help:hover div, #dropMenu li a.help:focus div{
+		background-position: -550px -200px!important;	
+}
+
+/* ========================================================= (END MENU) ====================================================== */
+/* ========================================================= (Footer/Navigations) ================================================== */
+
+
+.mrNext {
+	background-position: -150px -62px!important;
+}
+
+.mrNext:hover {
+	background-position: -300px -62px!important;
+}
+
+.mrNext:active{
+	background-position: -450px -62px!important;
+}
+
+.mrNext:disabled {
+	background-position: 0px -62px!important;
+}
+
+.mrPrev {
+	background-position: -150px 0px!important;
+}
+
+.mrPrev:hover {
+	background-position: -300px 0px!important;
+}
+
+.mrPrev:active{
+	background-position: -450px 0px!important;
+}
+
+.mrPrev:disabled {
+	background-position: 0px 0px!important;
+}
+/* ========================================================= (END Footer/Navigations) ================================================== */
+/* ========================================================= (TIB) ================================================== */
+
+#innerTest {
+border: 1px solid #0096C8;
+background: #0096C8  50% 50% repeat-x;
+}
+
+#projectDetails tr td{
+	color:#000000;
+}
+
+
+table.testTable {
+	border-color: #0096C8;
+}
+
+table.testTable th {
+	background-color:#0096C8;
+	border-color: #0096C8;
+}
+
+table.testTable td {
+	border-color: #0096C8;
+}
+
+.quotaFail{
+	background-color:#0096C8;
+}
+
+.rowHighlight{
+	background-color:#0096C8;
+}
+
+.linkShow {
+	color:#0096C8;
+}
+/* ========================================================= (END TIB) ================================================== */
+#datepicker{
+border: 2px solid #0096C8 !important;
+}
+
+/* ========================================================= (jQuery UI) ================================================== */
+.ui-widget-overlay {
+  background: #2b2922 !important;
+  opacity: .9 !important;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+background: #0096c8!important;
+}
+#slider-ui .ui-slider-handle {
+border: 0px!important;
+}
+
+/* ========================================================= (End jQuery UI) ================================================== */
+
+/* ========================================================= (Mobile Media query) ================================================== */
+
+@media screen and (max-device-width: 768px) and (orientation: portrait){
+
+	 .radio, .check{
+		background: url(../images/mobile/Sprites.png)!important;
+	}	
+	
+	
+	.check{
+		background-position: -50px -450px!important;
+	}
+
+	.checkHover{
+	background-position: 0px -450px!important;
+	}
+
+	.checkChecked{
+	background-position: -100px -450px!important;
+	}
+
+	.radio {
+		background-position: -50px -400px!important;
+	}
+
+	.radioHover{
+		background-position: 0px -400px!important;
+	}
+
+	.radioChecked{
+		background-position: -100px -400px!important;
+	}	
+	
+	
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape){
+    	
+}

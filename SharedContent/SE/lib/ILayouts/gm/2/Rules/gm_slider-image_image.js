@@ -1,0 +1,1 @@
+gm_slider_image_image=function(a,b){return[{c:1==a.aLen&&b.aLen%2==0,s:"/Styles/gm_single_slider-image_image_even.json"},{c:1==a.aLen&&b.aLen%2==1,s:"/Styles/gm_single_slider-image_image_odd.json"},{c:1!=a.aLen&&b.aLen%2==0,s:"/Styles/gm_multi_slider-image_image_even.json"},{c:!0,s:"/Styles/gm_multi_slider-image_image_odd.json"}]};

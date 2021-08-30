@@ -1,0 +1,1 @@
+rp_portrait=function(rs,cs){return[{c:true,s:"/Styles/rp_portrait.json"}];};

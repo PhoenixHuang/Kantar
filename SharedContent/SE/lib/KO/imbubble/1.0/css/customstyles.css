@@ -1,0 +1,56 @@
+.bubble {
+            background-color: #F2F2F2;
+            border-radius: 5px;
+            box-shadow: 0 0 6px #B2B2B2;
+            padding: 10px 18px;
+        }
+
+  
+
+        .questionTxt {
+            float: left;
+            margin: 5px 45px 5px 20px;
+        }
+
+           
+
+        .responseTxt {
+            float: right;
+            margin: 5px 20px 5px 45px;
+            background: #FFF9C4;
+        }
+#prev{
+    float: left;
+    cursor: pointer;
+}
+#next{
+    float: right;
+    cursor: pointer;
+}
+
+#survey{
+    max-width: 100%;
+    min-height: 640px;
+	background-color: #DDDDDD;
+}
+hr{
+	width:94.5% !important;
+	margin-bottom: 5px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	hr{
+		width:88% !important;
+		margin-bottom: 5px;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	hr{
+		width:88% !important;
+		margin-bottom: 5px;
+	}
+}
+

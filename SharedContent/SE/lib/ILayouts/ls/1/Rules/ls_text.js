@@ -1,0 +1,1 @@
+ls_text=function(rs,cs){return[{c:true,s:"/Styles/ls_text_default.json"}];};

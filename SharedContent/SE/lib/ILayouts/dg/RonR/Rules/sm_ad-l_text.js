@@ -1,0 +1,1 @@
+sm_ad_l_text=function(a,b){return[{c:b.mALen<40,s:"/Styles/sm_ad-l_text_39.json"},{c:!0,s:"/Styles/sm_ad-l_text_default.json"}]};

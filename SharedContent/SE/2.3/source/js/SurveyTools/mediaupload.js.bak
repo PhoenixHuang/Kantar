@@ -1,0 +1,320 @@
+/**
+ * mediaupload class
+ * Inherits from SESurveyTool
+ */
+function mediaupload(questionContainers, json, globalOpts) {
+    SESurveyTool.prototype.init.call(this, questionContainers, json, globalOpts);
+}
+mediaupload.prototype = Object.create(SESurveyTool.prototype);
+mediaupload.prototype.type = function() {
+    return "mediaupload";
+}
+mediaupload.prototype.getDependencies = function() {
+    return [{
+            'type': 'script',
+            'url': pageLayout.sharedContent + 'LAF/Lib/swfobject/2.2/swfobject.js'
+        }, {
+            'type': 'script',
+            'url': pageLayout.sharedContent + 'SE/dev/LAF/Lib/MediaUpload/jquery.FileReader.js'
+        }
+
+    ];
+}
+
+mediaupload.prototype.setResponses = function() {
+
+    //var response =$('input[type=file]').val()
+    //this.inputs.filter('textarea').val(response);  
+
+    //var imgPath =$('input[type=file]').val();
+
+}
+
+
+mediaupload.prototype.build = function() {
+
+
+    this.deferred.resolve();
+}
+
+mediaupload.prototype.render = function() {
+
+    // Get tool properties
+    var mediatype = this.getProperty("mediatype");
+    var opconame = this.getProperty("opconame");
+    var passcode = this.getProperty("passcode");
+    var uploadbuttonlabel = this.getProperty("uploadbuttonlabel");
+    var uploadbuttonlabelcolor = this.getProperty("uploadbuttonlabelcolor");
+    var uploadbuttonbackgrouncolor = this.getProperty("uploadbuttonbackgrouncolor");
+    var uploadbuttonlabelfontsize = this.getProperty("uploadbuttonlabelfontsize");
+    var uploadsessiontime = this.getProperty("uploadsessiontime");
+
+    this.componentContainer = $('<div>');
+    this.componentContainer.append(this.label);
+    this.componentContainer.attr('id', 'qc_' + this.questionFullName); //change to be more identifable with question?
+    this.componentContainer.addClass('qcContainer');
+    var inputcontainer = $("<div>");
+
+    // Create input file element 
+    var input = $("<input>");
+    input.attr('type', 'file');
+    input.addClass('fupload');
+    input.attr('name', this.questionName + 'Name');
+    input.attr('id', this.questionName + 'Id');
+    input.attr('style', 'border: 1px solid #ccc; background-color: #e0e0e0; padding: 8px; margin-top: 10px;');
+
+    var input1 = $("<input>");
+    input1.attr('type', 'button');
+    input1.addClass('fuploadButton');
+    input1.attr('id', this.questionName + 'Submit');
+    input1.attr('value', uploadbuttonlabel);
+    input1.attr('style', 'background: ' + uploadbuttonbackgrouncolor + '; border: 1px solid #ccc; padding: 10px; margin-left: 10px; color: ' + uploadbuttonlabelcolor + '; font-size: ' + uploadbuttonlabelfontsize + ';');
+    input1.bind("click", {
+        qname: this.questionName,
+        opconame: opconame,
+        passcode: passcode,
+        uploadsessiontime: uploadsessiontime
+    }, click_upload);
+
+    // For mobile, enable native feature
+
+    if (mediatype == 'image') {
+        input.attr('accept', 'image/*;capture=camera');
+    } else if (mediatype == 'video') {
+        input.attr('accept', 'video/*;capture=camcorder');
+    } else if (mediatype == 'audio') {
+        input.attr('accept', 'audio/*;capture=microphone');
+    }
+
+    var encodeContainer = $("<div>");
+    encodeContainer.attr('id', this.questionName + 'EncodeData');
+    encodeContainer.hide();
+
+    // Appending custom inputs to survey tool 
+    inputcontainer.append(input);
+    inputcontainer.append(input1);
+    inputcontainer.append(encodeContainer);
+    inputcontainer.append("<br/><br/>");
+    this.component = inputcontainer;
+
+    if (mediatype == "NotDefined" || opconame == "NotDefined" || passcode == "NotDefined") {
+
+        if (mediatype == "NotDefined") {
+            this.nativeContainer.find('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Metatag mediatype missing in question</span>");
+        }
+        if (opconame == "NotDefined") {
+            this.nativeContainer.find('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Metatag opconame missing in question</span>");
+        }
+        if (passcode == "NotDefined") {
+            this.nativeContainer.find('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Metatag passcode missing in question</span>");
+        }
+    } else {
+        this.componentContainer.append(this.component);
+        this.nativeContainer.after(this.componentContainer);
+        this.nativeContainer.hide();
+    }
+
+    //pageLayout.next.hide();
+
+    // File read and Encoded in base64 format and for IE9 will call flash filereader.swf
+
+    var filereaderSWF = pageLayout.sharedContent + "SE/dev/LAF/Lib/MediaUpload/filereader.swf";
+
+    $('#' + this.questionName + 'Id').fileReader({
+        filereader: filereaderSWF
+    });
+
+    $('#' + this.questionName + 'Id').change({
+        qname: this.questionName
+    }, function(e) {
+
+        pageLayout.createLoader();
+        var selectedfile = e.target.files[0];
+        var qname = e.data.qname;
+
+        filereader = new FileReader();
+        filereader.filename = selectedfile.name;
+
+        filereader.onload = function() {
+            var encodeData = filereader.result;
+			console.log(encodeData.length);
+			encodeData = encodeData.replace(/\s/g, '');
+            $("#" + qname + "EncodeData").html(selectedfile.size + ',' + selectedfile.type + ',' + encodeData);
+			//$("#" + qname + "EncodeData").html(encodeData);
+            pageLayout.hideLoader();
+        };
+        filereader.onabort = function() {
+            console.log('Upload aborted');
+            pageLayout.hideLoader();
+        };
+        filereader.onerror = function() {
+            console.log('Upload error');
+            pageLayout.hideLoader();
+        };
+        filereader.readAsDataURL(selectedfile);
+    });
+
+}
+
+
+mediaupload.prototype.toolOptions = function() {
+    $.extend(this.options, eval("this.options." + mediaupload.prototype.type()));
+    switch (pageLayout.deviceType.toUpperCase()) {
+        case "LARGETABLET":
+        case "MEDIUMTABLET":
+        case "SMALLTABLET":
+        case "SMARTPHONETOUCH":
+            if (this.orientation == 0 || this.orientation == 180) {
+                return {
+                    'mediatype': "NotDefined",
+                    'opconame': "NotDefined",
+                    'passcode': "NotDefined",
+                    'uploadsessiontime': "60000",
+                    'uploadbuttonlabel': "Upload",
+                    'uploadbuttonlabelcolor': "#fff",
+                    'uploadbuttonbackgrouncolor': "#9FCC3B",
+                    'uploadbuttonlabelfontsize': '16px'
+                }
+            } else {
+                return {
+                    'mediatype': "NotDefined",
+                    'opconame': "NotDefined",
+                    'passcode': "NotDefined",
+                    'uploadsessiontime': "60000",
+                    'uploadbuttonlabel': "Upload",
+                    'uploadbuttonlabelcolor': "#fff",
+                    'uploadbuttonbackgrouncolor': "#9FCC3B",
+                    'uploadbuttonlabelfontsize': '16px'
+                }
+            }
+        case "PC":
+        case "OTHERDEVICE":
+        default:
+            return {
+                'mediatype': "NotDefined",
+                'opconame': "NotDefined",
+                'passcode': "NotDefined",
+                'uploadsessiontime': "60000",
+                'uploadbuttonlabel': "Upload",
+                'uploadbuttonlabelcolor': "#fff",
+                'uploadbuttonbackgrouncolor': "#9FCC3B",
+                'uploadbuttonlabelfontsize': '16px'
+            }
+    }
+}
+
+//Upload button click event
+function click_upload(event) {
+
+    var qname = event.data.qname;
+    var opconame = event.data.opconame;
+    var passcode = event.data.passcode;
+    var uploadsessiontime = event.data.uploadsessiontime;
+
+    // File Type and Size validations
+    var completeBaseCode = document.getElementById(qname + "EncodeData").innerHTML;
+    var completeBaseCodeArray = completeBaseCode.split(',');
+    var fileSize = completeBaseCodeArray[0] //size in kb
+    var fileType = completeBaseCodeArray[1] //size in kb
+
+    fileSize = (fileSize / 1048576).toFixed(2); //size in mb 
+
+    var videoType = fileType.match('video.*');
+    var imageType = fileType.match('image.*');
+    var audioType = fileType.match('audio.*');
+
+    var fileTypeFullArray = fileType.split('/');
+    var fileExt = fileTypeFullArray[1];
+
+    if (videoType == null && imageType == null && audioType == null) {
+	$('.mrErrorText').remove();
+		$('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Please upload Image, Video or Audio file only.</span>");
+    } else {
+
+        if (videoType != null && fileSize > 30) {
+		$('.mrErrorText').remove();
+		$('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Please upload below 30MB video file</span>");
+        } else if (imageType != null && fileSize > 5) {
+		$('.mrErrorText').remove();
+		$('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Please upload below 5MB image file</span>");
+        } else if (audioType != null && fileSize > 7) {
+		$('.mrErrorText').remove();
+		$('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>Please upload below 7MB audio file</span>");
+        } else {
+            var Base64String = completeBaseCodeArray[3]
+            pageLayout.createLoader();
+            // Call .NET web service
+            sendToWebServer(qname, opconame, passcode, Base64String, fileType, fileExt, uploadsessiontime);
+
+        }
+
+    }
+}
+
+// Calling WebService with all inputs
+function sendToWebServer(qname, opconame, passcode, Base64String, fileType, fileExt, uploadsessiontime) {
+
+    //Get current timestamp
+    Date.prototype.timestamp = function() {
+        var yyyy = this.getFullYear().toString();
+        var mm = (this.getMonth() + 1).toString(); // getMonth() is zero-based
+        var dd = this.getDate().toString();
+        var h = this.getHours().toString();
+        var m = this.getMinutes().toString();
+        var s = this.getSeconds().toString();
+
+        return (mm[1] ? mm : "0" + mm[0]) + "" + (dd[1] ? dd : "0" + dd[0]) + "" + yyyy + "" + ((h > 12) ? h - 12 : h) + "" + m + "" + s;
+    };
+
+    d = new Date();
+
+    var timestamp = d.timestamp();
+
+    //Upload file name 
+    var fileName = opconame + "_" + passcode + "_" + projectName + "_" + serial + "_" + qname + "_" + timestamp + "." + fileExt;
+
+    // Capturing user upload time and stop request if it is over
+    var $request;
+    var uploadingTime = setTimeout(function() {
+        if ($request != null) {
+            $request.abort();
+            $request = null;
+        }
+		$('.mrErrorText').remove();
+		$('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>There was a problem uploading, please try again</span>");
+    }, uploadsessiontime);
+	
+	console.log(Base64String);
+    // Ajax we service
+    var data = {
+        Base64String: Base64String,
+        SASCode: projectName,
+        FileName: fileName,
+        ContentType: fileType,
+        Opco: opconame,
+		//uploadsessiontime: uploadsessiontime,
+        PassCode: passcode
+    };
+
+    $request = $.ajax({
+        type: 'POST',
+		crossDomain: true,
+        url: 'http://cdn.kantaroperations.com/multimedia/L2/MediaUpload/POC/Service.asmx/UploadFileJSON',
+        data: data,
+        dataType: 'json',
+	        success: function(data) {
+            clearTimeout(uploadingTime);
+            pageLayout.hideLoader();
+			$('.mrErrorText').remove();
+			$('.mrQuestionText').append("<span class=\"mrErrorText\" style=\"color:green;\"><br/>Upload successful</span>");
+        },
+        error: function(xhr, status, thrown) {
+			console.log(status);
+            clearTimeout(uploadingTime);
+            pageLayout.hideLoader();
+			$('.mrErrorText').remove();
+            $('.mrQuestionText').append("<span class=\"mrErrorText\"><br/>"+status.toUpperCase()+": Please try again</span>");
+
+        }
+    });
+}

@@ -1,0 +1,631 @@
+@media print {
+   body { visibility: hidden }
+   form { visibility: hidden }
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, font, img, strong, var, b, u, i, center, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: 0;
+    outline: 0;
+}
+
+body {
+	line-height: 1.25;
+	font-size:1em;
+	font-family:Arial;
+    overflow: auto;
+	background-color: #E6E6E6;
+}
+
+
+.noselect{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mrNext, .mrPrev, #dropMenu li a div, .radio, .check{
+	background: url(../images/Sprites.png);
+}	
+
+
+#survey{
+	margin: 0 auto; 
+	position: relative;
+	max-width:1000px;
+	display:block;
+    height: auto !important;
+    min-height: 200px;
+	clear: both;
+	padding: 0px;
+	background-color: rgb(255, 255, 255);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(204, 204, 204);
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+	box-shadow: 0px 0px 0px 0px #999999;
+	-webkit-box-shadow: 0px 0px 0px 0px #999999;
+	-moz-box-shadow: 0px 0px 0px 0px #999999;
+}
+
+#questions { 
+	padding: 40px 15px 0px 15px;
+	min-height:100px;
+	clear: both;
+}
+
+:focus {
+    outline: 0;
+}
+
+/* ========================================================= (AJAX LOADER) ====================================================== */
+
+#loader{
+	text-align:center;
+	padding-top:60px;
+	padding-bottom:30px;
+}
+
+/* ========================================================= (END AJAX LOADER) ====================================================== */
+/* ========================================================= (Dimensions Formatting) ====================================================== */
+.mrQuestionTable{border-collapse:collapse}
+.mrQuestionTable td{padding:0px 5px 0px 0px;}
+
+.mrSingleText, .mrMultipleText, .mrDropdown, .mrGridCategoryText, .mrGridQuestionText .mrQuestionText,.mrErrorText, input, textarea {font-size:14px;}
+.mrinstruct, .mrInstruct {font-size:16px;}
+.mrErrorText{color:#ff0000;font-weight:bold;}
+.mrQuestionText, .mrGridQuestionText, .endText {font-size:18px;}
+.mrEdit{font-family:Arial;}
+
+.questionContainer, .qcContainer, .questionTextBottomPadding {
+	padding-bottom:20px;
+}
+
+b,strong { font-weight: bold; }
+
+h1 { font-size: 2em; line-height: 1; margin-bottom: 0.5em; color:#0096C8;}
+h2 { font-size: 1.5em; margin-bottom: 0.75em; color:#0096C8;}
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; color:#0096C8;}
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em;color:#0096C8; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; color:#0096C8;}
+h6 { font-size: 1em; font-weight: bold; color:#0096C8;}
+    
+textarea {width: 680px;height:100px}
+
+
+/* ========================================================= (End Dimensions Formatting) ====================================================== */
+/* ========================================================= (End Link Formatting) ====================================================== */
+a#mrEndLink:link, a#mrEndLink:visited, a#mrEndLink:hover { border: 2px outset;padding: 2px;padding-top:3px;padding-bottom:3px;text-decoration: none;color: #000;background-color: #0096C8;}
+a#mrEndLink:active { border: 2px inset;text-decoration: none;color: #000;background-color: #0096C8; }
+/* ========================================================= (END End Link Formatting) ====================================================== */
+/* ========================================================= (CUSTOM BUTTONS) ====================================================== */
+
+.cbText {
+	position:relative;
+	top:5px;
+}
+
+.check, .radio {
+	width: 25px;
+	height: 25px;
+	margin-right:10px;
+	margin-left:20px;
+	display: inline-block;
+	clear: left;
+	float: left;
+}
+
+.check{
+	background-position: -25px -225px;
+}
+
+.checkHover{
+background-position: 0px -225px;
+}
+
+.checkChecked{
+background-position: -50px -225px;
+}
+
+.radio {
+	background-position: -25px -200px;
+}
+
+.radioHover{
+	background-position: 0px -200px;
+}
+
+.radioChecked{
+	background-position: -50px -200px;
+}	
+
+
+.gridRadio,.gridCheck{
+	float: none;
+	clear: none;
+	text-align: center;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+input.styled { display: none; }
+
+.disabled { opacity: 0.5; filter: alpha(opacity=50); }
+
+.hand {cursor:pointer;}
+
+.categoryVertSpacing{
+	/*first two are used for IE guillotine bug when image is in a floating container*/
+	clear:both;
+	line-height:0.5;
+	height:10px;
+}
+
+.otherPadding{
+  margin-right:10px;
+}
+
+.mrEditCodeSpacing{
+  margin-bottom:10px;
+}
+
+/* ========================================================= (END CUSTOM BUTTONS) ====================================================== */
+/* ========================================================= (MENU) ====================================================== */
+
+#kmenu {
+	position:relative;
+	top:-3px;
+	z-index:100;
+	background-color:#0096C8;
+	background-position: right;
+	background-repeat:no-repeat;
+	float:left;
+	width:100%;
+	margin: 0 0px;
+	height: 5px;
+}
+
+#kButton{
+	width:122px;
+	height:25px;
+	background-color:#0096C8;
+	position:relative;
+	float:right;
+	z-index:2;
+}
+
+#border-menu {
+  position: relative;
+  color:white;
+  margin-top:2px;
+}
+#border-menu span {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left:50px;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.5em double #fff;
+  border-bottom: 0.2em solid #fff;
+}
+
+#dropMenu{
+	width:122px;
+	position:absolute;
+	display: none;
+    top: 25px;
+    list-style-type:none;
+	background:#0096C8;
+	padding: 0 0 0 0;	
+	left:0px;
+}
+
+#dropMenu li a div{
+	display:block;
+    margin:auto;
+	width:35px;
+	height:50px;
+}
+
+#dropMenu li a{
+    width:100%;
+    height:100%;
+}
+
+#dropMenu li a.privacy div{
+	background-position: -415px -200px;
+}
+		
+#dropMenu li a.privacy:hover div, #dropMenu li a.privacy:focus div{
+	background-position: -450px -200px;	
+}
+	
+#dropMenu li a.help div{
+	background-position: -500px -200px;	
+}
+	
+#dropMenu li a.help:hover div, #dropMenu li a.help:focus div{
+		background-position: -550px -200px;	
+}
+	
+#dropMenu li div {
+	display:none
+}	
+
+/* ========================================================= (END MENU) ====================================================== */
+/* ========================================================= (Footer/Navigations) ================================================== */
+#surveyButtons{
+	width: 100%;
+	text-align:center;
+	border-top:solid 1px #ccc;
+	padding-bottom: 0px;
+	margin-top:40px;
+}
+.group:after { 
+    content: ""; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden
+}
+ 
+
+.mrNext, .mrPrev {
+	height: 62px;
+	width: 149px;
+	border: 0px solid;
+	color: rgba(255,255,255,0);
+	float:left;
+}
+
+.mrNext {
+	background-position: -150px -62px;
+}
+
+.mrNext:hover {
+	background-position: -300px -62px;
+}
+
+.mrNext:active{
+	background-position: -450px -62px;
+}
+
+.mrNext:disabled {
+	background-position: 0px -62px;
+}
+
+.mrPrev {
+	background-position: -150px 0px;
+}
+
+.mrPrev:hover {
+	background-position: -300px 0px;
+}
+
+.mrPrev:active{
+	background-position: -450px 0px;
+}
+
+.mrPrev:disabled {
+	background-position: 0px 0px;
+}
+/* ========================================================= (END Footer/Navigations) ================================================== */
+/* ========================================================= (TIB) ================================================== */
+#testPanel{
+	position:fixed;
+	top:0px;
+	width:100%;
+	text-align:center;
+}
+
+#innerTest {
+width: 250px;
+margin: auto auto;
+border: 1px solid #0096C8;
+background: #0096C8  50% 50% repeat-x;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+box-shadow: 10px 10px 5px #888888;
+cursor: pointer;
+}
+
+#projectDetails tr td{
+	width:150px;
+	color:#000000;
+}
+
+.errorBackground{
+	background-color:red!important;
+	background-image:url('')!important;
+}
+
+table.testTable {
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	font-size:11px;
+	color:#0096C8;
+	border-width: 1px;
+	border-color: #0096C8;
+	border-collapse: collapse;
+	width:100%;
+	margin-top:20px;
+}
+#testModal {
+	min-width: 600px;
+}
+table.testTable caption {
+	font-size:18px;
+	font-weight:bold;
+}
+
+table.testTable th {
+	background-color:#0096C8;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #0096C8;
+}
+
+table.testTable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #0096C8;
+}
+
+.quotaFail{
+	background-color:#0096C8;
+}
+
+.errorCount{
+	float:left;
+	font-size:14px;
+}
+.rowHighlight{
+	background-color:#0096C8;
+}
+
+.linkShow {
+	color:#0096C8;
+	font-size:12px;
+}
+/* ========================================================= (END TIB) ================================================== */
+#datepicker{
+border: 2px solid #0096C8 !important;
+}
+
+/* ========================================================= (jQuery UI) ================================================== */
+.ui-dialog .ui-dialog-title {
+
+color: #0096c8;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+border: 1px solid #0096c8!important;
+background: #0096c8!important;
+}
+.ui-datepicker-header{
+border: 1px solid #0096c8!important;
+background: #0096c8!important;
+}
+.ui-icon{
+border: 1px solid #0096c8!important;
+}
+a.ui-state-default{
+background: #0096c8;
+}
+
+.ui-state-default{
+color: #FFFFFF!important;
+}
+.ui-state-active{
+color: #000000!important;
+}
+.ui-state-hover, .ui-datepicker-next-hover
+{
+color: #FF0000!important;
+}
+.ui-datepicker-next-hover,.ui-datepicker-prev-hover{
+background: none!important;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+background: #0096c8!important;
+}
+#slider-ui .ui-slider-handle {
+border: 0px!important;
+}
+.ui-state-highlight {
+color: #fed22f!important;
+}
+
+
+/* ========================================================= (End jQuery UI) ================================================== */
+
+/* ========================================================= (Mobile Media query) ================================================== */
+
+@media screen and (max-device-width: 768px) and (orientation: portrait){
+
+	body {
+	background-color: #FFFFFF;
+    }
+	#survey{
+		margin:0px;
+		max-width:768px;
+		border-color: #FFFFFF;
+	}
+
+	 .radio, .check{
+		background: url(../images/mobile/Sprites.png);
+	}	
+	
+	
+	.mrSingleText, .mrMultipleText, .mrDropdown, .mrGridCategoryText, .mrGridQuestionText .mrQuestionText,.mrErrorText, input, textarea {font-size:24px;}
+	.mrinstruct, .mrInstruct {font-size:20px;}
+	.mrQuestionText, .mrGridQuestionText, .endText {font-size:24px;}
+
+	.cbText {
+		top:10px;
+	}
+	
+    .check, .radio {
+		width: 50px;
+		height: 50px;
+	}
+
+	.check{
+		background-position: -50px -450px;
+	}
+
+	.checkHover{
+	background-position: 0px -450px;
+	}
+
+	.checkChecked{
+	background-position: -100px -450px;
+	}
+
+	.radio {
+		background-position: -50px -400px;
+	}
+
+	.radioHover{
+		background-position: 0px -400px;
+	}
+
+	.radioChecked{
+		background-position: -100px -400px;
+	}	
+	
+	#kButton{
+		width:90px;
+		height:50px;
+	}
+	
+	#border-menu span {
+	  top: 0.5em;
+	  left:30px;
+	  width: 2em;
+	  height: 0.4em;
+	  border-top: 1em double #fff;
+	  border-bottom: 0.4em solid #fff;
+	}
+	
+	#dropMenu{
+		width:768px;
+		position:static;
+		height:72px;
+	}
+	
+	#dropMenu li a div{
+		width:35px;
+		height:50px;
+	}
+	
+	#dropMenu li{
+		float:right;
+	}
+	
+	#dropMenu li:nth-of-type(1){
+		float:left;
+	}
+	
+	#dropMenu li a.privacy div {
+		margin-right:100px;
+	}
+		
+	#dropMenu li a.help div{
+		margin-left:100px;
+	}
+	
+	.mrNext {
+	float:right;
+	}
+	
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape){
+    body {
+	background-color: #FFFFFF;
+    }
+	#survey{
+		margin:0px;
+		max-width:768px;
+		border-color: #FFFFFF;
+	}
+	
+	.mrSingleText, .mrMultipleText, .mrDropdown, .mrGridCategoryText, .mrGridQuestionText .mrQuestionText,.mrErrorText, input, textarea {font-size:16px;}
+	.mrinstruct, .mrInstruct {font-size:12px;}
+	.mrQuestionText, .mrGridQuestionText, .endText {font-size:16px;}
+    .mrSingle{font-size:18px;}
+	.cbText {
+		top:0px;
+	}
+
+	#kButton{
+		width:90px;
+		height:50px;
+	}
+
+	#border-menu span {
+	  top: 0.5em;
+	  left:30px;
+	  width: 2em;
+	  height: 0.4em;
+	  border-top: 1em double #fff;
+	  border-bottom: 0.4em solid #fff;
+	}	
+
+	#dropMenu{
+		width:768px;
+		position:static;
+		height:72px;
+	}
+	
+	#dropMenu li a div{
+		width:35px;
+		height:50px;
+	}	
+
+	#dropMenu li{
+		float:right;
+	}
+	#dropMenu li:nth-of-type(1){
+		float:left;
+	}
+	
+	#dropMenu li a.privacy div {
+		margin-right:100px;
+		margin-top: 10px;
+	}
+		
+	#dropMenu li a.help div{
+		margin-left:100px;
+		margin-top: 10px;
+	}	
+
+	.mrNext {
+	float:right;
+	}
+	
+}

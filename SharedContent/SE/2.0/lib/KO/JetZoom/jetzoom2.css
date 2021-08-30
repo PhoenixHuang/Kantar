@@ -1,0 +1,29 @@
+/*
+ Jet Zoom CSS. (c)2012-2013 Star Plugins.
+ This CSS can be altered to change the look and size of the lens.
+*/
+.jetzoom-lens {
+    border:8px solid #8EA85F;
+    width:50%;
+    height:50%;
+    border-radius: 40px;
+    box-shadow: -0px -0px 20px rgba(0,0,0,0.50);
+    cursor:crosshair;
+}
+
+/* A blank image */
+.jetzoom-blank {
+    background-image:url(http://cdn.tns-global.com/Multimedia/L2/JetZoomDemo/blank.png);
+}
+
+/* The animated ajax loading image */
+.jetzoom-ajax-loader {
+    background-image:url(http://cdn.tns-global.com/Multimedia/L2/JetZoomDemo/ajax-loader.gif);
+    width:32px;
+    height:32px;
+	position:relative;
+	left:117px;
+	top:200px;
+
+}
+.jetzoom{-ms-touch-action: none;}

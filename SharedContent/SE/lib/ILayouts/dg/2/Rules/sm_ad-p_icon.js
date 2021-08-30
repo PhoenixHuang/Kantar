@@ -1,0 +1,1 @@
+sm_ad_p_icon=function(a,b){return[{c:b.aLen<=8,s:"/Styles/sm_ad-p_icon_8.json"},{c:!0,s:"/Styles/sm_ad-p_icon_default.json"}]};

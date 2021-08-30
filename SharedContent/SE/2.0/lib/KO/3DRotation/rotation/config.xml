@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <copyright>
+    <images>ODIsOTIsODgsNzcsODIsNjQsMTI3LDg5LDE4LDc1LDEyMCw2OSw4Niw5Miw5OSwxMjUsMTI1LDkwLDQ1LDg1LDU3LDQsMTIsNTYsMjIsNzgsNTcsNDAsMjMsMTAsNzcsMTEyLDAsNDUsMjMsMjYsMjksODQsNDEsMjUsNDYsMTAsNzEsNzMsNTMsNzQsODUsNDAsMTUsMTEzLDQ4LDkzLDg3LDExLDIyLDEsMjYsNDEsNCw5NCwyMywxMjEsNzEsMCw4OSwxMTAsMTI2LDQwLDkxLDkxLDgsNjksODQsNzIsMTIwLDkzLDE1LDY3LDQyLDE3LDYsOTIsMTA4LDEyMA==</images>
+  </copyright>
+  <application />
+  <settings>
+
+    <preloader image="first" showStartButton="false" preLoadImages="true" showLoadedImages="false" />
+
+    <userInterface defaultCursor="false" showTogglePlayButton="true" showArrows="true" showZoombar="true" showScrollbar="false" showSpeedbar="false" showTogglePanButton="zoom" showToggleRotateButton="zoom" />
+
+    <control maxZoom="300" zoomSteps="2" clickZoomsIn="false" disableDrag="false" disableMouseControl="false" dragSpeed="0.3" enableSwing="true" playAfterDrag="false" reverseDrag="false" smoothStop="false" zoomInStopsRotation="true" zoomOutStartsRotation="true" />
+
+    <rotation autoRestart="0" bounce="false" firstImage="0" rotate="true" rotateDirection="-1" rotatePeriod="3" >
+       <multiDirectional verticalSteps="1" horizontalSteps="36" verticalSensitivity="20" traverse="1" multidirectionalCycle="true"/>
+    </rotation>
+
+    <defaults>
+    	<image shrinkToFit="true" zoomToFit="true" showTitle="true" showDescription="true" showHotspots="true"/>
+    </defaults>
+  </settings>
+  <images>
+<image src="images/Ribena_00.jpg" />  
+<image src="images/Ribena_01.jpg" />  
+<image src="images/Ribena_02.jpg" />  
+<image src="images/Ribena_03.jpg" />  
+<image src="images/Ribena_04.jpg" />  
+<image src="images/Ribena_05.jpg" />  
+<image src="images/Ribena_06.jpg" />  
+<image src="images/Ribena_07.jpg" />  
+<image src="images/Ribena_08.jpg" />  
+<image src="images/Ribena_09.jpg" />  
+<image src="images/Ribena_10.jpg" />  
+<image src="images/Ribena_11.jpg" />  
+<image src="images/Ribena_12.jpg" />  
+<image src="images/Ribena_13.jpg" />  
+<image src="images/Ribena_14.jpg" />  
+<image src="images/Ribena_15.jpg" />  
+<image src="images/Ribena_16.jpg" />  
+<image src="images/Ribena_17.jpg" />  
+<image src="images/Ribena_18.jpg" />  
+<image src="images/Ribena_19.jpg" />  
+<image src="images/Ribena_20.jpg" />  
+<image src="images/Ribena_21.jpg" />  
+<image src="images/Ribena_22.jpg" />  
+<image src="images/Ribena_23.jpg" />  
+<image src="images/Ribena_24.jpg" />  
+<image src="images/Ribena_25.jpg" />  
+<image src="images/Ribena_26.jpg" />  
+<image src="images/Ribena_27.jpg" />  
+<image src="images/Ribena_28.jpg" />  
+<image src="images/Ribena_29.jpg" />  
+<image src="images/Ribena_30.jpg" />  
+<image src="images/Ribena_31.jpg" />  
+<image src="images/Ribena_32.jpg" />  
+<image src="images/Ribena_33.jpg" />  
+<image src="images/Ribena_34.jpg" />  
+<image src="images/Ribena_35.jpg" />  
+  </images>
+</config>

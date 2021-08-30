@@ -1,0 +1,1 @@
+sm_ad_p_product=function(a,b){return[{c:b.aLen<=4,s:"/Styles/sm_ad-p_product_4.json"},{c:!0,s:"/Styles/sm_ad-p_product_default.json"}]};

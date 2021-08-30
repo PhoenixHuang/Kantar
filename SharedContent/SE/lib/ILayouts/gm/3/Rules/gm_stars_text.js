@@ -1,0 +1,1 @@
+gm_stars_text=function(a,b){return[{c:!0,s:"/Styles/gm_stars_text_default.json"}]};

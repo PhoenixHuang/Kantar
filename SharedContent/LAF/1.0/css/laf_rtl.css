@@ -1,0 +1,23 @@
+/* ========================================================= (Reset css) ====================================================== */
+html
+{
+	direction:rtl;
+}
+
+#kButton{
+	float:left;
+}
+
+.mrNext, .mrPrev {
+	float:right;
+}
+
+.radio, .checkbox {
+  float:none;
+  margin-right:0px;
+  margin-left:10px;
+}
+
+label{
+	float:none!important
+}

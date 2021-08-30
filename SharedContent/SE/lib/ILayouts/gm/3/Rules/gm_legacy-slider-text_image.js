@@ -1,0 +1,1 @@
+gm_legacy_slider_text_image=function(a,b){return[{c:1==a.aLen&&b.aLen%2==0,s:"/Styles/gm_legacy-single_slider-text_image_even.json"},{c:1==a.aLen&&b.aLen%2==1,s:"/Styles/gm_legacy-single_slider-text_image_odd.json"},{c:1!=a.aLen&&b.aLen%2==0,s:"/Styles/gm_legacy-multi_slider-text_image_even.json"},{c:!0,s:"/Styles/gm_legacy-multi_slider-text_image_odd.json"}]};

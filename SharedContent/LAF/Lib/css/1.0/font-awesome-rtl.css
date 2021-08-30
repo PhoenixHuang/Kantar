@@ -1,0 +1,167 @@
+/* Position of bullets on unordered lists */
+[class$="list-ul"] {
+	margin-left: inherit;
+	padding-left: inherit;
+	margin-right: 2.14286em;
+	padding-right: 0;
+}
+[class$="list-li"] {
+	left: inherit;
+	right: -2.14286em;
+}
+/* Reversible icons */
+
+.icon-hand-up, .fa-hand-o-up,
+.icon-hand-down, .fa-hand-o-down,
+[class$="adjust"],
+.icon-ban-circle, .fa-ban,
+[class$="barcode"],
+.fa-bed,
+[class$="beer"],
+.fa-bell-slash,
+.fa-bell-slash-o,
+.fa-bicycle,
+[class$="bolt"],
+.fa-bomb,
+[class$="book"],
+.fa-area-chart,
+[class$="bar-chart"],
+.fa-bar-chart-o,
+.fa-line-chart,
+.fa-pie-chart,
+[class$="backward"],
+[class$="fast-backward"],
+[class$="step-backward"],
+[class$="forward"],
+[class$="fast-forward"],
+[class$="step-forward"],
+.icon-resize-full, .fa-expand,
+.icon-resize-small, .fa-compress,
+[class$="play"],
+.icon-play-sign .fa-play-circle,
+.icon-play-circle .fa-play-circle-o,
+[class$="bullhorn"],
+[class$="spinner"],
+[class$="star-half"],
+[class$="star-half-empty"],
+[class$="star-half-full"],
+.fa-star-half-o {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1); /* IE8 */
+	transform: scale(-1,1);
+}
+/* Reverse direction of spin */
+.fa-spin {
+	animation-direction: reverse;
+}
+/* angle-start/end */
+[class$="angle-left"]:before {
+	content: "\f105";
+}
+[class$="angle-right"]:before {
+	content: "\f104";
+}
+/* angle-double-start/end */
+.fa-angle-double-left:before {
+	content: "\f101";
+}
+.fa-angle-double-right:before {
+	content: "\f100";
+}
+.icon-double-angle-left:before {
+	content: "\f101";
+}
+.icon-double-angle-right:before {
+	content: "\f100";
+}
+/* arrow-circle-start/end */
+.fa-arrow-circle-left:before {
+	content: "\f0a9";
+}
+.fa-arrow-circle-right:before {
+	content: "\f0a8";
+}
+.icon-circle-arrow-left:before {
+	content: "\f0a9";
+}
+.icon-circle-arrow-right:before {
+	content: "\f0a8";
+}
+/* arrow-circle-o-start/end */
+.fa-arrow-circle-o-left:before {
+	content: "\f18e";
+}
+.fa-arrow-circle-o-right:before {
+	content: "\f190";
+}
+/* arrow-start/end */
+[class$="arrow-left"]:before {
+	content: "\f061";
+}
+[class$="arrow-right"]:before {
+	content: "\f060";
+}
+/* caret-start/end */
+[class$="caret-left"]:before {
+	content: "\f0da";
+}
+[class$="caret-right"]:before {
+	content: "\f0d9";
+}
+
+/* caret-square-o-start/end */
+/* toggle-start/end*/
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+	content: "\f152";
+}
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+	content: "\f191";
+}
+/* chevron-circle-start/end */
+.fa-chevron-circle-left:before {
+	content: "\f138";
+}
+.fa-chevron-circle-right:before {
+	content: "\f137";
+}
+.icon-chevron-sign-left:before {
+	content: "\f138";
+}
+.icon-chevron-sign-right:before {
+	content: "\f137";
+}
+/* chevron-start/end */
+[class$="chevron-left"]:before {
+	content: "\f054";
+}
+[class$="chevron-right"]:before {
+	content: "\f053";
+}
+/* hand-o-start/end */
+.fa-hand-o-left:before {
+	content: "\f0a4";
+}
+.fa-hand-o-right:before {
+	content: "\f0a5";
+}
+.icon-hand-left:before {
+	content: "\f0a4";
+}
+.icon-hand-right:before {
+	content: "\f0a5";
+}
+/* long-arrow-start/end */
+
+.fa-long-arrow-start:before {
+	content: "\f177";
+}
+.fa-long-arrow-end:before {
+	content: "\f178";
+}
+[class$="long-arrow-left"]:before {
+	content: "\f178";
+}
+[class$="long-arrow-right"]::before {
+	content: "\f177";
+}

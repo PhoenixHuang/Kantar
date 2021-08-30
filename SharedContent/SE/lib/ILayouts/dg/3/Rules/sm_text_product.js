@@ -1,0 +1,1 @@
+sm_text_product=function(a,b){return[{c:!0,s:"/Styles/sm_text_product_default.json"}]};

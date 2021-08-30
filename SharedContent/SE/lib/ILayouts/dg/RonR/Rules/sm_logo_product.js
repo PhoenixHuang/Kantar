@@ -1,0 +1,1 @@
+sm_logo_product=function(a,b){return[{c:!0,s:"/Styles/sm_logo_product_default.json"}]};

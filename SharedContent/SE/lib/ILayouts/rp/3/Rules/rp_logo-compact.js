@@ -1,0 +1,1 @@
+rp_logo_compact=function(rs,cs){return[{c:true,s:"/Styles/rp_logo-compact.json"}];};

@@ -1,0 +1,1 @@
+rp_oe_short_icon=function(rs,cs){return[{c:true,s:"/Styles/rp_oe-short-icon.json"}];};

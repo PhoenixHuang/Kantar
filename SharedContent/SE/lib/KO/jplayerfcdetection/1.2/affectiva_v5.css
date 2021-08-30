@@ -1,0 +1,150 @@
+#errPosition, #errPosLight, #errLight {
+	background-color: #fff;
+	border: 1px solid #000;
+	padding: 5px;
+	position: absolute;
+	top: 265px;
+	width: 326px;
+	z-index: 99;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#affWait {
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+	height: 128px;
+	position: absolute;
+	top: 260px;
+	width: 128px;
+	z-index: 100;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#affWait .preloader-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.question-text{
+	display:none;
+}
+
+.errImage, .errText {
+	font-size: 12px;
+	font-weight: normal;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.errImage img{
+	width:100%;
+}
+
+div#affContainer{
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	min-height:496px;
+}
+
+body, html, form {
+	overflow: auto !important;
+}
+
+div#affEmbed {
+	width: 320px;
+	height: 241px;
+}
+
+div#buttonContainer {
+	margin: 5px 0px;
+	padding: 0px;
+	width:380px;
+	z-index: 100;
+}
+
+span#affContent {
+	vertical-align: top;
+	width: 380px;
+}
+
+input#affContinue, .fakeContinue {
+	height: 30px;
+	margin: 0px;
+	padding: 0px 10px;
+	text-align:center;
+	border: 1px outset black;
+	width: 200px;
+}
+
+.instruct {
+	display: block;
+	font-size:12px;
+	padding:0px;
+	margin: 0px;
+	font-weight: normal;
+	text-align: left;
+	width: 350px;
+}
+
+.headLeft {
+	width: 250px;
+	padding: 0px;
+	padding-right: 10px;
+	display: inline-block;
+	vertical-align:bottom;
+}
+
+.headRight {
+	width: 250px;
+	padding: 0px;
+	padding-left: 10px;
+	display: inline-block;
+	vertical-align:bottom;
+}
+
+.headSpace{
+	width: 380px;
+	display: inline-block;
+}
+
+.visleft {
+	width: 250px;
+	padding: 0px;
+	padding-right: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.visright {
+	width: 250px;
+	padding: 0px;
+	padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.visright div, .visleft div{
+	padding-bottom: 2px;
+}
+
+.hideContainer {
+    visibility: hidden;
+	width: 0px;
+	height: 0px !important;
+	overflow: hidden;
+}
+
+.errHidden {
+	display: none;
+}
+
+.mrQuestionText br { display: none; }
+
+html { overflow: auto !important; }

@@ -1,0 +1,1 @@
+sm_ad_p_scale_icon=function(a,b){return[{c:!0,s:"/Styles/sm_ad-p_scale-icon_default.json"}]};

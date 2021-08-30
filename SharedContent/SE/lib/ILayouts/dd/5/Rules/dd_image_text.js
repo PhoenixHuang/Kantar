@@ -1,0 +1,1 @@
+dd_image_text=function(a,b){return[{c:b.aLen<=2,s:"/Styles/dd_image_text_2.json"},{c:b.aLen<=3,s:"/Styles/dd_image_text_3.json"},{c:b.aLen<=4,s:"/Styles/dd_image_text_4.json"},{c:b.aLen<=5,s:"/Styles/dd_image_text_5.json"},{c:b.aLen<=6,s:"/Styles/dd_image_text_6.json"}]};

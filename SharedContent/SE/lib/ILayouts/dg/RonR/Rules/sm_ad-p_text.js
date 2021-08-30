@@ -1,0 +1,1 @@
+sm_ad_p_text=function(a,b){return[{c:b.aLen<=10,s:"/Styles/sm_ad-p_text_10.json"},{c:!0,s:"/Styles/sm_ad-p_text_default.json"}]};

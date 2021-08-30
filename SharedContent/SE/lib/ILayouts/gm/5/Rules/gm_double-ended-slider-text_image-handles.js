@@ -1,0 +1,1 @@
+gm_double_ended_slider_text_image_handles=function(rs,cs){return[{c:true,s:"/Styles/gm_double-ended-slider-text_image-handles.json"}];};

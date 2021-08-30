@@ -1,0 +1,1 @@
+tg_text_text_rating=function(rs,cs){return[{c:true,s:"/Styles/tg_text_text-rating.json"}];};

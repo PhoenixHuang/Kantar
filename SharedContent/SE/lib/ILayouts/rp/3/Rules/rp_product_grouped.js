@@ -1,0 +1,1 @@
+rp_product_grouped=function(rs,cs){return[{c:true,s:"/Styles/rp_product_grouped_default.json"}];};

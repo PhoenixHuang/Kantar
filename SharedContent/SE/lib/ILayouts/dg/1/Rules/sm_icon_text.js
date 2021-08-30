@@ -1,0 +1,1 @@
+sm_icon_text=function(a,b){return[{c:b.mALen<40,s:"/Styles/sm_icon_text_39.json"},{c:!0,s:"/Styles/sm_icon_text_default.json"}]};

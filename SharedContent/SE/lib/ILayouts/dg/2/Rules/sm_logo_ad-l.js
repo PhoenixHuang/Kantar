@@ -1,0 +1,1 @@
+sm_logo_ad_l=function(a,b){return[{c:!0,s:"/Styles/sm_logo_ad-l_default.json"}]};

@@ -1,0 +1,1 @@
+sm_ad_p_scale_text=function(a,b){return[{c:!0,s:"/Styles/sm_ad-p_scale-text_default.json"}]};

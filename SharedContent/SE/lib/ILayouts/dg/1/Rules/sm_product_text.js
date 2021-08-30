@@ -1,0 +1,1 @@
+sm_product_text=function(a,b){return[{c:b.mALen<40,s:"/Styles/sm_product_text_39.json"},{c:!0,s:"/Styles/sm_product_text_default.json"}]};

@@ -1,0 +1,54 @@
+.tick { 
+        position: absolute;
+        width: 10em;
+        margin-left: -5em;
+        text-align:center;
+        left: 0;
+		margin-top: 10px;
+        }
+.ui-slider-range { background: #e5edd6; }
+ 
+  #slider-ui .ui-slider-handle {
+	 width: 48px;
+	height: 48px;
+	position: absolute;
+	top: -8px;
+	margin-left: -26px;
+	z-index: 200;
+	background: url(../se/images/Sprites.png) -90px 0 no-repeat;
+	border : 0px;
+}
+
+.playBtnClass
+{
+	position: relative;
+	margin:auto;
+	width:120px;
+	text-align:center;
+	disply:inline;
+	cursor:pointer;
+	bottom:18px;
+	*+bottom:-8px; /*Hack for IE7*/
+	z-index: 300;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.playBtnClass:hover
+{
+	color: #EFA000;
+	font-weight: bold;
+}
+.playBtnClass:hover .playIconClass{
+	background:url(../se/images/Sprites.png) -46px 0;
+}
+
+.playIconClass { 
+   vertical-align: middle;
+   width:44px;
+	height:44px;
+	background:url(../se/images/Sprites.png) 0 0;
+} 
+
+.playIconClass:hover { background:url(../se/images/Sprites.png) 44px 0;
+} 

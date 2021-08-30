@@ -1,0 +1,1 @@
+rp_ad_p=function(rs,cs){return[{c:true,s:"/Styles/rp_ad-p_default.json"}];};

@@ -1,0 +1,1 @@
+rp_oe_long=function(rs,cs){return[{c:true,s:"/Styles/rp_oe-long.json"}];};

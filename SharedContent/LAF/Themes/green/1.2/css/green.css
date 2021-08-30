@@ -1,0 +1,155 @@
+
+.mrNext, .mrPrev, #dropMenu li a div, .radio, .check{
+	background: url(../images/Sprites.png)!important;
+}	
+
+/* ========================================================= (Dimensions Formatting) ====================================================== */
+
+h1 {  color:#6eb02b;}
+h2 {  color:#6eb02b;}
+h3 { color:#6eb02b;}
+h4 { color:#6eb02b; }
+h5 { color:#6eb02b;}
+h6 { color:#6eb02b;}
+  
+/* ========================================================= (End Dimensions Formatting)
+====================================================== */ 
+
+.check{
+	background-position: -25px -225px!important;
+}
+
+.checkHover{
+background-position: 0px -225px!important;
+}
+
+.checkChecked{
+background-position: -50px -225px!important;
+}
+
+.radio {
+	background-position: -25px -200px!important;
+}
+
+.radioHover{
+	background-position: 0px -200px!important;
+}
+
+.radioChecked{
+	background-position: -50px -200px!important;
+}	
+
+
+
+#kmenu {
+	background-color:#9FCC3B;
+}
+
+#kButton{
+	background-color:#9FCC3B;
+}
+
+
+#dropMenu{
+	background:#9FCC3B;
+}
+
+
+#dropMenu li a.privacy div{
+	background-position: -415px -200px!important;
+}
+		
+#dropMenu li a.privacy:hover div, #dropMenu li a.privacy:focus div{
+	background-position: -450px -200px!important;	
+}
+	
+#dropMenu li a.help div{
+	background-position: -500px -200px!important;	
+}
+	
+#dropMenu li a.help:hover div, #dropMenu li a.help:focus div{
+		background-position: -550px -200px!important;	
+}
+
+.mrNext {
+	background-position: -150px -62px!important;
+}
+
+.mrNext:hover {
+	background-position: -300px -62px!important;
+}
+
+.mrNext:active{
+	background-position: -450px -62px!important;
+}
+
+.mrNext:disabled {
+	background-position: 0px -62px!important;
+}
+
+.mrPrev {
+	background-position: -150px 0px!important;
+}
+
+.mrPrev:hover {
+	background-position: -300px 0px!important;
+}
+
+.mrPrev:active{
+	background-position: -450px 0px!important;
+}
+
+.mrPrev:disabled {
+	background-position: 0px 0px!important;
+}
+
+
+#innerTest{
+	background:#9FCC3B
+}
+
+
+table.testTable th {
+	background-color:#8EA85F;
+}
+
+
+
+
+/* ========================================================= (Mobile Media query) ================================================== */
+
+@media screen and (max-device-width: 768px) and (orientation: portrait){
+
+	
+    .radio, .check{
+		background: url(../images/mobile/Sprites.png)!important;
+	}	
+	
+	.check{
+		background-position: -50px -450px!important;
+	}
+
+	.checkHover{
+	background-position: 0px -450px!important;
+	}
+
+	.checkChecked{
+	background-position: -100px -450px!important;
+	}
+
+	.radio {
+		background-position: -50px -400px!important;
+	}
+
+	.radioHover{
+		background-position: 0px -400px!important;
+	}
+
+	.radioChecked{
+		background-position: -100px -400px!important;
+	}	
+	
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape){
+		
+}

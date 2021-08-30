@@ -1,0 +1,1 @@
+rp_product=function(rs,cs){return[{c:true,s:"/Styles/rp_product_default.json"}];};

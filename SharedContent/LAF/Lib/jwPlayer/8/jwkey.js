@@ -1,0 +1,2 @@
+$("head").append($("<script src='" + pageLayout.sharedContent + "LAF/Lib/jwPlayer/8/jwplayer.js'><!--x--></script>"));
+$("head").append($("<script>jwplayer.key='a8dv3WYyDz6RURS1xePCqutFx9popzaHBirB/NryPDE=';</script>"));

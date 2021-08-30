@@ -1,0 +1,1 @@
+sm_product_icon=function(a,b){return[{c:!0,s:"/Styles/sm_product_icon_default.json"}]};

@@ -1,0 +1,1 @@
+rp_oe_short_product=function(rs,cs){return[{c:true,s:"/Styles/rp_oe-short-product.json"}];};

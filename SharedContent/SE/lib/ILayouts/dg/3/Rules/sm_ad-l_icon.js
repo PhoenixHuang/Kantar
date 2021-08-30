@@ -1,0 +1,1 @@
+sm_ad_l_icon=function(rs,cs){return[{c:true,s:"/Styles/sm_ad-l_icon_default.json"}];};

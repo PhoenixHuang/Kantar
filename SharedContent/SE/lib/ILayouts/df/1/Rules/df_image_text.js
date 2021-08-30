@@ -1,0 +1,1 @@
+df_image_text=function(a,b){return[{c:b.aLen%2==0,s:"/Styles/df_image_text_even.json"},{c:!0,s:"/Styles/df_image_text_odd.json"}]};

@@ -1,0 +1,53 @@
+ .tick { 
+        position: absolute;
+        width: 10em;
+        margin-left: -5em;
+        text-align:center;
+        left: 0;
+        }
+.ui-slider-range { background: #e5edd6; }
+ 
+  #slider-ui .ui-slider-handle {
+	 width: 24px;
+	height: 24px;
+	position: absolute;
+	top: -4px;
+	margin-left: -13px;
+	z-index: 200;
+	background: url(../se/images/Sprites.png) -44px 0 no-repeat;
+	border : 0px;
+}
+
+.playBtnClass
+{
+	position: relative;
+	margin:auto;
+	width:60px;
+	text-align:center;
+	disply:inline;
+	cursor:pointer;
+	bottom:18px;
+	z-index: 300;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.playBtnClass:hover
+{
+	color: #EFA000;
+	font-weight: bold;
+}
+.playBtnClass:hover .playIconClass{
+	background:url(../se/images/Sprites.png) -22px 0;
+}
+
+.playIconClass { 
+   vertical-align: middle;
+   width:22px;
+	height:21px;
+	background:url(../se/images/Sprites.png) 0 0;
+} 
+
+.playIconClass:hover { background:url(../se/images/Sprites.png) 22px 0;
+} 
+
+

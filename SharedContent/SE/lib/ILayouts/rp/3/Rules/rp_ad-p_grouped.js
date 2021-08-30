@@ -1,0 +1,1 @@
+rp_ad_p_grouped=function(rs,cs){return[{c:true,s:"/Styles/rp_ad-p_grouped_default.json"}];};

@@ -1,0 +1,1 @@
+gm_text_text_twocol=function(rs,cs){return[{c:true,s:"/Styles/gm_text_text-twocol.json"}];};
