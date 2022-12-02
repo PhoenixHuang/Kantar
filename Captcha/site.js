@@ -1,3 +1,4 @@
+
 var startX,startY; 
 document.addEventListener("touchstart",function(e){ 
     startX = e.targetTouches[0].pageX;
@@ -19,8 +20,8 @@ $(function () {
             return 'https://cdn.jsdelivr.net/gh/phoenixhuang/kantar/Captcha/Pics/Pic' + Math.round(Math.random() * 99) + '.jpg';
         },
         onSuccess: function () { 
-            $(".mrNext").show();
-            $("form")[0].submit();             
+            $(".mrNext").show();;
+
         }
     });   
     
